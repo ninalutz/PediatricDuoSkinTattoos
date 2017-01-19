@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119190127) do
+ActiveRecord::Schema.define(version: 20170119203533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pain_logs", force: :cascade do |t|
-    t.string  "body_part",  default: "", null: false
-    t.integer "pain_level", default: 1,  null: false
-    t.integer "patient_id"
+    t.string   "body_part",  default: "", null: false
+    t.integer  "pain_level", default: 1,  null: false
+    t.integer  "patient_id"
+    t.datetime "created_at"
     t.index ["patient_id"], name: "index_pain_logs_on_patient_id", using: :btree
   end
 
