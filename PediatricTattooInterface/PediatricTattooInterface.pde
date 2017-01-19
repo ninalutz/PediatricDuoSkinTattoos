@@ -6,15 +6,17 @@ boolean home, showprofile;
 void setup(){
   size(1200, 800);
   initGraphics();
-  drawHomeScreen();
+//  drawHomeScreen();
+  drawPatientProfile("Test123");
 }
 
 void draw(){
-  home = true;
+ 
   background(background);
-    fill(accentwhite);
+  fill(accentwhite);
+  textSize(30);
+  textAlign(CENTER, CENTER);
   text("Welcome to Health Care", width/2, 50);
-//  if(home){
-//    image(homescreen, 0, 0);
-//  }
+//  image(homescreen, 0, 0);
+  image(profile, 0, 0);
 }
