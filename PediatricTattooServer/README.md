@@ -22,10 +22,28 @@ Required field: `name`
 
 `curl -H "Content-Type: application/json" -X POST -d '{"name": "abcde", "ble_id": "123456789", "doctor": "John Doe"}' http://url/patients`
 
-response:
+response: `{"id":1,"name":"lala","ble_id":"1234","doctor":"lili"}`
 
 #### Update
 
 `curl -H "Content-Type: application/json" -X PATCH -d '{"name": "fghij"}' http://url/patients/1`
 
-response:
+response: `{"id":1,"name":"lala","ble_id":"1234","doctor":"lili"}`
+
+#### Get Patient's Pain Log
+
+`curl -X GET http://localhost:3000/patients/:id/pain_log`
+
+### Pain Logs
+
+#### Create
+
+Visit http://url/pain_logs/new to create a new pain log using the form
+
+Required field: 'patient_id, body_part, pain_level'
+
+`curl -H "Content-Type: application/json" -X POST -d '{"patient_id": 1, "body_part": "left_limb", "pain_level": 9}' http://url/pain_logs`
+
+#### Update
+
+`curl -H "Content-Type: application/json" -X PATCH -d '{"body_part": "right_limb"}' http://url/patients/1`

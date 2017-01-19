@@ -11,6 +11,7 @@ class PainLogsController < ApplicationController
 	end
 
 	def new
+		@pain_log = PainLog.new
 	end
 
 	def create
@@ -44,6 +45,6 @@ class PainLogsController < ApplicationController
 	end
 
 	def patient_params
-		params.require(:patient).permit(:name, :ble_id, :doctor)
+		params.require(:pain_log).permit(:body_part, :pain_level, :patient_id)
 	end
 end

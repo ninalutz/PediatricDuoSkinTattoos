@@ -1,0 +1,14 @@
+<h1>New Pain Log :(</h1>
+
+<%= form_for @pain_log do |f| %>
+	<%= f.label :body_part %>
+	<%= f.text_field :body_part %><br />
+
+	<%= f.label :patient_id %>
+	<%= f.number_field :patient_id %><br />
+
+	<%= f.label :pain_level %>
+	<%= f.number_field :pain_level %><br />
+
+	<%= f.submit %>
+<% end %>

@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-	before_action :prepare_patient, only: [:show, :update, :destroy]
+	before_action :prepare_patient, only: [:show, :update, :destroy, :pain_log]
 
 	def index
 		@patients = Patient.all
@@ -41,6 +41,11 @@ class PatientsController < ApplicationController
 	def search
 		@patient = Patient.find_by(ble_id: params[:ble_id])
 		render json: @patient
+	end
+
+	def pain_log
+		@pain_log = @patient.pain_logs
+		render json: @pain_log
 	end
 
 	private
