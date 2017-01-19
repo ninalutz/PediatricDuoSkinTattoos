@@ -3,12 +3,15 @@ import javax.swing.*;
 import java.io.*;
 boolean home, showprofile;
 
+
 void setup(){
   size(1200, 800);
   initGraphics();
   //initButtons();
   //drawHomeScreen();
   drawPatientProfile("Test123");
+  
+  initPorts();
 }
 
 void draw(){
@@ -25,4 +28,8 @@ void draw(){
   text("Welcome to Health Care", width/2, 50);
 //  image(homescreen, 0, 0);
   image(profile, 0, 0);
+  
+    for(int i=0; i<buttons.length; ++i) {
+    buttons[i].display();
+  }
 }
