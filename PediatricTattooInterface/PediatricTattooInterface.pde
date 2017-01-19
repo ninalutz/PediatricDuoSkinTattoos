@@ -6,7 +6,8 @@ boolean home, showprofile;
 void setup(){
   size(1200, 800);
   initGraphics();
-//  drawHomeScreen();
+  //initButtons();
+  //drawHomeScreen();
   drawPatientProfile("Test123");
 }
 

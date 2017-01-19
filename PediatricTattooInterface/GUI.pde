@@ -17,11 +17,6 @@ void initGraphics(){
   profile = createGraphics(width, height);
 }
 
-void initButtons(){
-    Interactive.make( this );
-    isReporting = new SimpleButton(50, 500, 100, 50, "Report");
-}
-
 public class SimpleButton
 {
     float x, y, width, height;
