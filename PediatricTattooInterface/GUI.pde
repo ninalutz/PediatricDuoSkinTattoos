@@ -19,18 +19,17 @@ void initGraphics(){
 
 void initButtons(){
     Interactive.make( this );
-    new SimpleButton(50, 50, 50, 50, "test");
     isReporting = new SimpleButton(50, 500, 100, 50, "Report");
 }
-
 
 public class SimpleButton
 {
     float x, y, width, height;
     boolean on;
     String name;
+    PGraphics p;
     
-    SimpleButton ( float xx, float yy, float w, float h, String _name )
+    SimpleButton ( float xx, float yy, float w, float h, String _name)
     {
         x = xx; y = yy; width = w; height = h; name = _name;
         

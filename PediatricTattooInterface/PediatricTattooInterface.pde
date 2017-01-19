@@ -1,17 +1,24 @@
 import processing.serial.*;
 import javax.swing.*;
 import java.io.*;
+boolean home, showprofile;
 
 void setup(){
-  size(1200, 600);
+  size(1200, 800);
   initGraphics();
-  initButtons();
+  drawHomeScreen();
 }
 
 void draw(){
+  home = true;
   background(background);
   
   if (isReporting.on) {
       println("I'm printing");
   }
+    fill(accentwhite);
+  text("Welcome to Health Care", width/2, 50);
+//  if(home){
+//    image(homescreen, 0, 0);
+//  }
 }
