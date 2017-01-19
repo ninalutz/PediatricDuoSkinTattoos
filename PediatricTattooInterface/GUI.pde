@@ -10,6 +10,7 @@ import de.bezier.guido.*;
 import controlP5.*;
 
 SimpleButton button;
+SimpleButton isReporting;
 
 void initGraphics(){
   homescreen = createGraphics(width, height);
@@ -19,6 +20,7 @@ void initGraphics(){
 void initButtons(){
     Interactive.make( this );
     new SimpleButton(50, 50, 50, 50, "test");
+    isReporting = new SimpleButton(50, 500, 100, 50, "Report");
 }
 
 

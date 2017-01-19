@@ -10,5 +10,8 @@ void setup(){
 
 void draw(){
   background(background);
-
+  
+  if (isReporting.on) {
+      println("I'm printing");
+  }
 }
