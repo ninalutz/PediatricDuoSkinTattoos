@@ -4,7 +4,7 @@ import java.io.*;
 
 void setup(){
   size(1200, 600);
-  initPGraphics();
+  initGraphics();
   initButtons();
 }
 

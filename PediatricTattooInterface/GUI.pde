@@ -12,8 +12,8 @@ import controlP5.*;
 SimpleButton button;
 
 void initGraphics(){
-  homescreen = new PGraphic(width, height);
-  profile = new PGraphic(width, height);
+  homescreen = createGraphics(width, height);
+  profile = createGraphics(width, height);
 }
 
 void initButtons(){
