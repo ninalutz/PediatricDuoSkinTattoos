@@ -1,4 +1,4 @@
-void draw_PatientProfile(){
+void drawPatientProfile(String Patient){
   
 
 }
