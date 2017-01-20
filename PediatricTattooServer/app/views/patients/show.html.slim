@@ -6,7 +6,7 @@
 
 .row
   .small-6.columns
-    p picture placeholder
+    = image_tag @patient.bio_pic
   .small-6.columns
     h2 = @patient.name
     table
@@ -18,16 +18,16 @@
         td = @patient.id
       tr
         td Address
-        td 4444 Coffee Ave, Cambridge MA
+        td = @patient.address
       tr
-        td Home Phone
-        td 123456789
+        td Phone
+        td = @patient.phone
       tr
         td Gender
-        td Female
+        td = @patient.gender
       tr
         td Email
-        td lala@example.com
+        td = @patient.email
 
 .row
   .small-6.columns

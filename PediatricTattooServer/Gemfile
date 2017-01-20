@@ -12,6 +12,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'foundation-rails'
 gem 'slim-rails'
 gem 'simple_form'
+gem "paperclip", "~> 5.0.0"
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119203533) do
+ActiveRecord::Schema.define(version: 20170120170642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,19 @@ ActiveRecord::Schema.define(version: 20170119203533) do
   end
 
   create_table "patients", force: :cascade do |t|
-    t.string "name",   default: "", null: false
-    t.string "ble_id"
-    t.string "doctor"
+    t.string   "name",                 default: "",   null: false
+    t.string   "ble_id"
+    t.string   "doctor"
+    t.string   "bio_pic_file_name"
+    t.string   "bio_pic_content_type"
+    t.integer  "bio_pic_file_size"
+    t.datetime "bio_pic_updated_at"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "gender"
+    t.string   "email"
+    t.jsonb    "problems",             default: "[]", null: false
+    t.jsonb    "medications",          default: "[]", null: false
   end
 
   add_foreign_key "pain_logs", "patients"
