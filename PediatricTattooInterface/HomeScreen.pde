@@ -6,7 +6,7 @@ int xspace = 300;
 int yspace = 350;
 PImage James, Ben, Zach, David, Stacy, Mary, Beth, Jane;
 String[] names = {"James", "Ben", "Zach", "David", "Stacy", "Mary", "Beth", "Jane"};
-
+ArrayList<SimpleButton>ChildrenButtons = new ArrayList<SimpleButton>();
 void drawHomeScreen(){
   println("drawing homescreen", millis());
   //showprofile = false;
@@ -26,6 +26,7 @@ if(home){
     for(int i = 0; i<numrows; i++){
       for(int j = 0; j<numcols; j++){
             button = new SimpleButton(xoffset + xspace*j, yoffset + yspace*i, 200, 250, names[count], true, count, images[count]);
+            ChildrenButtons.add(button);
             count+=1;
         }
     }

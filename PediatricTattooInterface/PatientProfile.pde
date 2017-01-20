@@ -7,7 +7,7 @@ void drawPatientProfile(int Patient){
     Interactive.make( this );
     isReporting = new SimpleButton(width/2-100, 275, 200, 50, "Access Full Report", false, 0, Jane);
     requestDoctor = new SimpleButton(width/2-100, 350, 200, 50, "Visit Patient", false, 0, Jane);
-    homebutton = new SimpleButton(10, 10, 200, 50, "Home", false, 0, Jane);
+    homebutton = new SimpleButton(10, 10, 200, 50, "Home", false, Patient, Jane);
     profile.beginDraw();
     profile.fill(lightblue);
     profile.rect(width-width/3, 100, 300, 300);
