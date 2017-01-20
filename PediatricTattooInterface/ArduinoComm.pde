@@ -59,6 +59,7 @@ void keyPressed() {
   if(key == 'r') {
     setBaseline();
   } 
+  
 }
 
 void setBaseline() {

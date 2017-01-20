@@ -1,8 +1,20 @@
 PImage bear;
 PShape s;
 void drawPatientProfile(int Patient){
-    println("drawing patient profile", millis());
-          PImage[] images = {James, Ben, Zach, David, Stacy, Mary, Beth, Jane};
+  println("Drawing thing", Patient);
+  homescreen.clear();
+  
+  ChildrenButtons.get(Patient).on = false;
+  Jane = loadImage("data/Jane.jpg");
+  Ben = loadImage("data/Ben.jpg");
+  Zach = loadImage("data/Zach.jpg");
+  David = loadImage("data/David.jpg");
+  Stacy = loadImage("data/Stacy.jpg");
+  Mary = loadImage("data/Mary.jpg");
+  Beth = loadImage("data/Beth.jpg");
+  James = loadImage("data/James.jpg");
+  
+    PImage[] images = {James, Ben, Zach, David, Stacy, Mary, Beth, Jane};
     Interactive.make( this );
     isReporting = new SimpleButton(width/2-100, 275, 200, 50, "Access Full Report", false, 0, Jane);
     requestDoctor = new SimpleButton(width/2-100, 350, 200, 50, "Visit Patient", false, 0, Jane);
@@ -14,7 +26,7 @@ void drawPatientProfile(int Patient){
     
     profile.rect(width-width/3, 100, 300, 300);
     profile.image(images[Patient], width-width/3 + 50, 120, 200, 260);
-    profile.rect(width/3-300, height/2 + 50, width-200, 300);
+   profile.rect(width/3-300, height/2 + 50, width-200, 300);
     profile.fill(#ffffff);
     profile.textAlign(CENTER, CENTER);
     profile.textSize(30);
@@ -46,8 +58,7 @@ void drawPatientProfile(int Patient){
     profile.text("7", 403, 228);
     profile.line(316, 130, 371, 110);
     profile.text("2", 376, 105);
-    
-    profile.shape(s, 0, 0);
+
     profile.endDraw();
     
 }

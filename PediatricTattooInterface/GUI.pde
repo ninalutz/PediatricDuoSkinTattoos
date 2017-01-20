@@ -40,6 +40,7 @@ public class SimpleButton
 
     void draw () 
     {
+      
    if ( on ) fill(lightblue, 50);
         else fill(medblue, 50);
         if(image && home){
@@ -49,9 +50,22 @@ public class SimpleButton
            textSize(20);
            textAlign(CENTER, CENTER);
            text(name, width/2+x, y+height/2);
+             
         }
         
-        if(image == false){
+        if(image){
+          if(on){
+             home = false;
+             profile.clear();
+             drawPatientProfile(imgnumber);
+          }
+        }
+        
+        if(homebutton.on){
+          home = true;
+        }
+        
+        if(image == false && home ==false){
          if ( on ) fill(lightblue, 50);
           else fill(medblue, 50);
           rect(x, y, width, height);
@@ -60,25 +74,7 @@ public class SimpleButton
           textAlign(CENTER, CENTER);
           text(name, width/2+x, y+height/2);
         }
-        
-        if(home){
-            if(ChildrenButtons.get(imgnumber).on){
-              home = false;
-              showprofile = true;
-              drawPatientProfile(imgnumber);
-              homebutton.on = false;
-            }
-        }
-        
-        if(showprofile){
-          if(name.equals("Home")){
-            if(on){
-              showprofile = false;
-              home = true;
-              ChildrenButtons.get(imgnumber).on = false;
-              profile.clear();
-            }
-          }
-        }
+
+      
     }
 }

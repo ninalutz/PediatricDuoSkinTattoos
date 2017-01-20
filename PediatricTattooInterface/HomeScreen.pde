@@ -7,8 +7,9 @@ int yspace = 350;
 PImage James, Ben, Zach, David, Stacy, Mary, Beth, Jane; 
 String[] names = {"James", "Ben", "Zach", "David", "Stacy", "Mary", "Beth", "Jane"};
 ArrayList<SimpleButton>ChildrenButtons = new ArrayList<SimpleButton>();
+boolean homebuttoner;
 void drawHomeScreen(){
-     
+  homebuttoner = false;
   println("drawing homescreen", millis());
   //showprofile = false;
   Jane = loadImage("data/Jane.jpg");
@@ -33,6 +34,7 @@ if(home){
         }
     }
 }
+
     
     homescreen.beginDraw();
     homescreen.textSize(30);
