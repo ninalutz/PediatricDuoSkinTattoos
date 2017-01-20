@@ -44,6 +44,10 @@ void serialEvent(Serial p) {
   String line = p.readStringUntil('\n').trim();
   String[] toks = line.split(",");
   
+  if(visitorVisit){
+    arduinoPort.write(1);
+     }
+  
   if(toks.length >= NUM_BUTTONS){  
    
     for(int i=0; i<NUM_BUTTONS; ++i) {

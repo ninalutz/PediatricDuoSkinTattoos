@@ -1,7 +1,7 @@
 import processing.serial.*;
 import javax.swing.*;
 import java.io.*;
-boolean home, showprofile, isRecording, isRequesting;
+boolean home, showprofile, isRecording, isRequesting, visitorVisit;
 
 void setup(){
   home = true;
@@ -72,6 +72,13 @@ void draw(){
       buttons[5].time = 0;
       buttons[5].capacitance = 0;
   }
+  
+  if(showprofile){
+  if(visitPatient.on){
+     visitorVisit = true;
+  }
+  }
+  
   
   //record the sensor readings if recording
   
