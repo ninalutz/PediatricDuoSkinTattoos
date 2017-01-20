@@ -41,9 +41,9 @@ public class SimpleButton
     void draw () 
     {
       
-   if ( on ) fill(lightblue, 50);
-        else fill(medblue, 50);
         if(image && home){
+             if ( on ) fill(lightblue);
+        else fill(medblue, 50);
            image(picture, x, y, width, height);
            rect(x, y, width, height);
            fill(accentwhite);       
@@ -52,6 +52,7 @@ public class SimpleButton
            text(name, width/2+x, y+height/2);
              
         }
+        
         
         if(image){
           if(on){

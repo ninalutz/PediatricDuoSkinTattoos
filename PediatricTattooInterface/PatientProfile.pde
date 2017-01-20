@@ -3,6 +3,7 @@ PShape s;
 void drawPatientProfile(int Patient){
   println("Drawing thing", Patient);
   homescreen.clear();
+  profile.clear();
   
   ChildrenButtons.get(Patient).on = false;
   Jane = loadImage("data/Jane.jpg");
@@ -20,13 +21,16 @@ void drawPatientProfile(int Patient){
     requestDoctor = new SimpleButton(width/2-100, 350, 200, 50, "Visit Patient", false, 0, Jane);
     homebutton = new SimpleButton(10, 10, 200, 50, "Home", false, Patient, Jane);
     
-    
+    isReporting.on = false;
+    requestDoctor.on = false;
     profile.beginDraw();
     profile.fill(lightblue);
+        profile.stroke(#ffffff);
+    profile.strokeWeight(2);
     
     profile.rect(width-width/3, 100, 300, 300);
     profile.image(images[Patient], width-width/3 + 50, 120, 200, 260);
-   profile.rect(width/3-300, height/2 + 50, width-200, 300);
+    profile.rect(width/3-300, height/2 + 50, width-200, 300);
     profile.fill(#ffffff);
     profile.textAlign(CENTER, CENTER);
     profile.textSize(30);
@@ -42,23 +46,19 @@ void drawPatientProfile(int Patient){
     bear.resize(700, 501);
     
     profile.image(bear, -80, 30);
-    profile.stroke(#ffffff);
-    profile.strokeWeight(2);
     profile.line(168, 181, 119, 209);
-    profile.text("5", 105, 215);
+    profile.text(str(int(random(10))), 105, 215);
     profile.line(156, 269, 242, 252);
-    profile.text("1", 142, 265);
-    profile.line(156, 269, 242, 252);
-    profile.text("1", 142, 265); 
+    profile.text(str(int(random(10))), 142, 265);
     profile.line(124, 320, 208, 341);
-    profile.text("3", 110, 317);
+    profile.text(str(int(random(10))), 110, 317);
     profile.line(376, 280, 344, 342);
-    profile.text("3", 373, 265);
+    profile.text(str(int(random(10))), 373, 265);
     profile.line(369, 174, 400, 225);
-    profile.text("7", 403, 228);
+    profile.text(str(int(random(10))), 403, 228);
     profile.line(316, 130, 371, 110);
-    profile.text("2", 376, 105);
-
+    profile.text(str(int(random(10))), 376, 105);
+      
     profile.endDraw();
     
 }
