@@ -48,6 +48,7 @@ void draw(){
   //if the recording button is turned on or not
   if(buttons[0].capacitance > 100 && buttons[0].time > .1){
      isRecording = !isRecording;
+     drawPatientProfile(curpatient);
   }
  
   //if requesting a doctor
@@ -56,15 +57,18 @@ void draw(){
       buttons[1].time = 0;
   }
   
+  //record the sensor readings if recording
+  
+  //export to PDF if view report pressed 
 
   // PostRequestSample
-  //if (isReporting.on) {
-  //  PostRequest post = new PostRequest("https://pediatrictattoo.herokuapp.com/patients");
-  //  post.addHeader("Accept", "application/json");
-  //  post.addData("name", "Rune");
-  //  post.send();
-  //  println("Reponse Content: " + post.getContent());
-  //  println("Reponse Content-Length Header: " + post.getHeader("Content-Length"));
-  //  delay(1000);
-  //}
+//  if (isRecording) {
+//    PostRequest post = new PostRequest("https://pediatrictattoo.herokuapp.com/patients");
+//    post.addHeader("Accept", "application/json");
+//    post.addData("name", "Rune");
+//    post.send();
+//    println("Reponse Content: " + post.getContent());
+//    println("Reponse Content-Length Header: " + post.getHeader("Content-Length"));
+//    delay(1000);
+//  }
 }

@@ -16,6 +16,8 @@ void initGraphics(){
   profile = createGraphics(width, height);
 }
 
+int curpatient;
+
 public class SimpleButton
 {
     float x, y, width, height;
@@ -59,6 +61,7 @@ public class SimpleButton
              home = false;
              profile.clear();
              drawPatientProfile(imgnumber);
+             curpatient = imgnumber;
           }
         }
         
