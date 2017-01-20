@@ -30,7 +30,7 @@ void drawPatientProfile(int Patient){
         profile.stroke(#ffffff);
     profile.strokeWeight(2);
     
-        int[] pain = {int(random(10)), int(random(10)), int(random(10)), int(random(10)), int(random(10)), int(random(10))};
+    int[] pain = {int(buttons[1].time), int(buttons[2].time), int(buttons[3].time), int(buttons[4].time), 0, 0};
     int painrate = 0;
     for(int i = 0; i<pain.length; i++){
       painrate+=pain[i];

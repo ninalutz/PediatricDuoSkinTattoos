@@ -39,11 +39,11 @@ void draw(){
         buttons[i].time = 0;
       }
   }
-    for(int i = 2; i<buttons.length; i++){
-      if(buttons[i].capacitance > 250){
-       buttons[i].display();
-      }
-    }
+//    for(int i = 1; i<buttons.length-1; i++){
+//      if(buttons[i].capacitance > 250){
+//       buttons[i].display();
+//      }
+//    }
   
   //if the recording button is turned on or not
   if(buttons[0].capacitance > 100 && buttons[0].time >0){
@@ -57,10 +57,10 @@ void draw(){
   }
  
   //if requesting a doctor
-  if(buttons[4].capacitance > 210 && buttons[4].time>0){
+  if(buttons[5].capacitance > 210 && buttons[5].time>0){
       requestDoctor.on = !requestDoctor.on;
-      buttons[4].time = 0;
-      buttons[4].capacitance = 0;
+      buttons[5].time = 0;
+      buttons[5].capacitance = 0;
   }
   
   //record the sensor readings if recording
