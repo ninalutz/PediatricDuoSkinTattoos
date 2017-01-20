@@ -50,8 +50,8 @@ void drawPatientProfile(int Patient){
     
     profile.fill(#ffffff);
     profile.text("Current pain reading: " + painrate, width/2-100, 225-75);
-    profile.text("Room Numer: " + int(random(304)), width/2-100, 200-75);
-    profile.text("Age: " + int(random(8, 10)), width/2-100, 175-75);
+    profile.text("Room Numer: " + 201, width/2-100, 200-75);
+    profile.text("Age: " + 9, width/2-100, 175-75);
     bear.resize(700, 501);
     
 
