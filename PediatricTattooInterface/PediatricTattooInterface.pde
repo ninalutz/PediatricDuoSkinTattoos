@@ -5,31 +5,35 @@ boolean home, showprofile;
 
 
 void setup(){
+  home = true;
   size(1200, 800);
+    bear = loadImage("BearTattooPNG.png");
   initGraphics();
-  //initButtons();
-  //drawHomeScreen();
-  drawPatientProfile("Test123");
   
-  initPorts();
+//  drawHomeScreen();
+// drawPatientProfile("Test123");
+  drawHomeScreen();
+  //drawPatientProfile(0);
+  //initPorts();
 }
 
 void draw(){
+  if(millis() % 3 == 0){
+  //println(home, showprofile);
+  }
  
   background(background);
-  fill(accentwhite);
-  textSize(30);
-  textAlign(CENTER, CENTER);
-  
-  if (isReporting.on) {
-      println("I'm printing");
+//
+  if(home){
+  image(homescreen, 0, 0);
   }
-    fill(accentwhite);
-  text("Welcome to Health Care", width/2, 50);
-//  image(homescreen, 0, 0);
+//  
+  if(showprofile){
+    fill(background);
   image(profile, 0, 0);
-  
-    for(int i=0; i<buttons.length; ++i) {
-    buttons[i].display();
   }
+  
+//    for(int i=0; i<buttons.length; ++i) {
+//    buttons[i].display();
+//  }
 }
