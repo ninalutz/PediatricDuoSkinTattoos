@@ -32,7 +32,12 @@ void draw(){
   
     for(int i=0; i<buttons.length; ++i) {
       if(buttons[i].capacitance > 250){
-    buttons[i].display();
+        buttons[i].time+=.1;
+        buttons[i].display();
+        println(i, buttons[i].time, second());
+      }
+      else{
+        buttons[i].time = 0;
       }
   }
 
