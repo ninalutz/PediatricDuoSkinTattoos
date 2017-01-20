@@ -18,7 +18,7 @@ void setup(){
 
 void draw(){
   if(millis() % 3 == 0){
-  //println(home, showprofile);
+ // println(home, showprofile);
   }
  
   background(background);
@@ -42,7 +42,7 @@ void draw(){
   //  delay(1000);
   //}
     fill(accentwhite);
-  text("Welcome to Health Care", width/2, 50);
+  //text("Welcome to Health Care", width/2, 50);
 //  image(homescreen, 0, 0);
   image(profile, 0, 0);
   }

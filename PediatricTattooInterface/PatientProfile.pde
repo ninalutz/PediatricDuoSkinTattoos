@@ -1,16 +1,17 @@
 PImage bear;
 
 void drawPatientProfile(int Patient){
-    println("drawing patient profile");
-    
-    homescreen.clear();
+    println("drawing patient profile", millis());
+          PImage[] images = {James, Ben, Zach, David, Stacy, Mary, Beth, Jane};
     Interactive.make( this );
     isReporting = new SimpleButton(width/2-100, 275, 200, 50, "Access Full Report", false, 0, Jane);
     requestDoctor = new SimpleButton(width/2-100, 350, 200, 50, "Visit Patient", false, 0, Jane);
     homebutton = new SimpleButton(10, 10, 200, 50, "Home", false, Patient, Jane);
     profile.beginDraw();
     profile.fill(lightblue);
+    
     profile.rect(width-width/3, 100, 300, 300);
+    profile.image(images[Patient], width-width/3 + 50, 120);
     profile.rect(width/3-300, height/2 + 50, width-200, 300);
     profile.fill(#ffffff);
     profile.textAlign(CENTER, CENTER);

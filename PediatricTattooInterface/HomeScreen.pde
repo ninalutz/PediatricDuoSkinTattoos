@@ -4,10 +4,11 @@ int xoffset = 50;
 int yoffset = 100;
 int xspace = 300;
 int yspace = 350;
-PImage James, Ben, Zach, David, Stacy, Mary, Beth, Jane;
+PImage James, Ben, Zach, David, Stacy, Mary, Beth, Jane; 
 String[] names = {"James", "Ben", "Zach", "David", "Stacy", "Mary", "Beth", "Jane"};
 ArrayList<SimpleButton>ChildrenButtons = new ArrayList<SimpleButton>();
 void drawHomeScreen(){
+     
   println("drawing homescreen", millis());
   //showprofile = false;
   Jane = loadImage("data/Jane.jpg");
@@ -20,6 +21,7 @@ void drawHomeScreen(){
   James = loadImage("data/James.jpg");
   
   PImage[] images = {James, Ben, Zach, David, Stacy, Mary, Beth, Jane};
+  
 if(home){
     int count = 0;
     Interactive.make(this);
