@@ -14,7 +14,7 @@ void setup(){
   drawHomeScreen();
 
  // drawPatientProfile(0);
-  //initPorts();
+  initPorts();
 }
 
 void draw(){
@@ -30,9 +30,11 @@ void draw(){
     image(profile, 0, 0);
   }
   
-//    for(int i=0; i<buttons.length; ++i) {
-//    buttons[i].display();
-//  }
+    for(int i=0; i<buttons.length; ++i) {
+      if(buttons[i].capacitance > 250){
+    buttons[i].display();
+      }
+  }
 
   // PostRequestSample
   //if (isReporting.on) {
