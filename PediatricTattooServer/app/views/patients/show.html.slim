@@ -1,0 +1,59 @@
+.expanded.row
+  .top-bar
+  	.top-bar-left
+      ul.dropdown-menu
+        li.menu-text MIT Medical
+
+.row
+  .small-6.columns
+    p picture placeholder
+  .small-6.columns
+    h2 = @patient.name
+    table
+      tr
+        td Attending doctor
+        td = @patient.doctor
+      tr
+        td Patient ID
+        td = @patient.id
+      tr
+        td Address
+        td 4444 Coffee Ave, Cambridge MA
+      tr
+        td Home Phone
+        td 123456789
+      tr
+        td Gender
+        td Female
+      tr
+        td Email
+        td lala@example.com
+
+.row
+  .small-6.columns
+    h3 Problems
+    ul
+      li Problem 1
+      li Lorem Ipsum
+      li Dolor Sit Amet
+  .small-6.columns
+    h3 Medications
+    ul
+      li Med 1
+      li Med 2
+      li Med 3
+
+.row
+  .small-12.columns
+    h3 Report Log
+    table
+      thead
+        tr
+          th Body Part
+          th Pain Level
+          th Time
+      - @pain_log.each do |t|
+        tr
+          td = t.body_part
+          td = t.pain_level
+          td = t.created_at

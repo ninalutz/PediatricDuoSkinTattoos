@@ -1,0 +1,21 @@
+.expanded.row
+  .top-bar
+  	.top-bar-left
+      ul.dropdown-menu
+        li.menu-text So and So Hospital
+
+.row
+  = form_for @patient do |f|
+  	= f.label :name
+  	= f.text_field :name
+  	br
+
+  	= f.label :ble_id
+  	= f.text_field :ble_id
+  	br
+
+  	= f.label :doctor
+  	= f.text_field :doctor
+  	br
+
+  	= f.submit

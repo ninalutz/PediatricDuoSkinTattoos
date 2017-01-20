@@ -3,10 +3,11 @@ class PatientsController < ApplicationController
 
 	def index
 		@patients = Patient.all
+		render json: @patients
 	end
 
 	def show
-		@pain_log = @patient.pain_logs
+		render json: @patient
 	end
 
 	def new
