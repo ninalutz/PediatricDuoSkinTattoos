@@ -6,10 +6,10 @@ html lang="en"
 
     title == content_for?(:title) ? yield(:title) : "Untitled"
 
-    = stylesheet_link_tag "application"
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = wicked_pdf_stylesheet_link_tag "pdf"
-    = wicked_pdf_javascript_include_tag "number_pages"
+    / = stylesheet_link_tag "application"
+    / = javascript_include_tag "application", "data-turbolinks-track" => true
+    = wicked_pdf_stylesheet_link_tag "application"
+    = wicked_pdf_javascript_include_tag "application"
     = csrf_meta_tag
 
   body

@@ -1,12 +1,17 @@
 class PatientsController < ApplicationController
-	before_action :prepare_patient, only: [:show, :update, :destroy, :pain_log]
+	before_action :prepare_patient, only: [:show, :update, :destroy, :pain_log, :generate_pdf]
 
 	def index
 		@patients = Patient.all
 	end
 
 	def show
-		@pain_log = @patient.pain_logs
+		respond_to do |format|
+	      format.html
+	      format.pdf do
+	        render :pdf => "report", :layout => 'pdf.html.slim'
+	      end
+	    end
 	end
 
 	def new
@@ -45,6 +50,9 @@ class PatientsController < ApplicationController
 	def pain_log
 		@pain_log = @patient.pain_logs
 		render json: @pain_log
+	end
+
+	def generate_pdf
 	end
 
 	private

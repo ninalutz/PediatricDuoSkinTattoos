@@ -4,12 +4,10 @@
       ul.dropdown-menu
         li.menu-text MIT Medical
         li = link_to 'Download Report', patient_path(id: @patient.id,format: 'pdf')
-br
-br
 
 .row
   .small-6.columns
-    = image_tag @patient.bio_pic
+    = wicked_pdf_image_tag @patient.bio_pic
   .small-6.columns
     h2 = @patient.name
     table
