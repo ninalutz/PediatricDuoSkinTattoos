@@ -37,7 +37,7 @@ void draw(){
         println(i, buttons[i].time, second());
       }
       else{
-        if(i == 0 || i == 5){
+        if(i == 1 || i == 7){
         buttons[i].time = 0;
         }
         else{
@@ -56,10 +56,10 @@ void draw(){
 //    }
   
   //if the recording button is turned on or not
-  if(buttons[0].capacitance > 210 && buttons[0].time >0){
+  if(buttons[1].capacitance > 210 && buttons[1].time >0){
      isRecording = !isRecording;
-     buttons[0].capacitance = 0;
-     buttons[0].time = 0;
+     buttons[1].capacitance = 0;
+     buttons[1].time = 0;
   }
   
   if(isRecording){
@@ -67,10 +67,10 @@ void draw(){
   }
  
   //if requesting a doctor
-  if(buttons[5].capacitance > 210 && buttons[5].time>0){
+  if(buttons[7].capacitance > 210 && buttons[7].time>0){
       requestDoctor.on = !requestDoctor.on;
-      buttons[5].time = 0;
-      buttons[5].capacitance = 0;
+      buttons[7].time = 0;
+      buttons[7].capacitance = 0;
   }
   
   if(showprofile){

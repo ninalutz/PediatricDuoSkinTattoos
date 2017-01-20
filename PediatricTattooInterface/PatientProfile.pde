@@ -37,7 +37,7 @@ void drawPatientProfile(int Patient){
 //    }
     
    // if(!isRecording){
-     int[] pain = {0, int(buttons[1].storedtime), int(buttons[3].storedtime), int(buttons[4].storedtime), int(buttons[2].storedtime), 0};
+     int[] pain = {int(buttons[2].storedtime), int(buttons[0].storedtime), int(buttons[3].storedtime), int(buttons[5].storedtime), int(buttons[6].storedtime), int(buttons[4].storedtime)};
     //}
     
     int painrate = 0;
@@ -67,16 +67,22 @@ void drawPatientProfile(int Patient){
     profile.image(bear, -80, 30);
     profile.line(168, 181, 119, 209);
     profile.text(pain[0], 105, 215);
+    
     profile.line(156, 269, 242, 252);
-    profile.text(pain[1], 142, 265);
+    profile.text(pain[5], 142, 265);
+    
     profile.line(124, 320, 208, 341);
-    profile.text(pain[2], 110, 317);
+    profile.text(pain[1], 110, 317);
+    
     profile.line(376, 280, 344, 342);
     profile.text(pain[3], 373, 265);
+    
     profile.line(369, 174, 400, 225);
     profile.text(pain[4], 403, 228);
+    
+    //head
     profile.line(316, 130, 371, 110);
-    profile.text(pain[5], 376, 105);
+    profile.text(pain[2], 376, 105);
     
     float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
     
