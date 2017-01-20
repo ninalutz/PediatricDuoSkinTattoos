@@ -1,7 +1,7 @@
 import processing.serial.*;
 import javax.swing.*;
 import java.io.*;
-boolean home, showprofile;
+boolean home, showprofile, isRecording, isRequesting;
 
 void setup(){
   home = true;
@@ -30,16 +30,32 @@ void draw(){
     image(profile, 0, 0);
   }
   
-    for(int i=0; i<buttons.length; ++i) {
+      for(int i=0; i<buttons.length; ++i) {
       if(buttons[i].capacitance > 250){
         buttons[i].time+=.1;
-        buttons[i].display();
         println(i, buttons[i].time, second());
       }
       else{
         buttons[i].time = 0;
       }
   }
+    for(int i = 2; i<buttons.length; i++){
+      if(buttons[i].capacitance > 250){
+       buttons[i].display();
+      }
+    }
+  
+  //if the recording button is turned on or not
+  if(buttons[0].capacitance > 100 && buttons[0].time > .1){
+     isRecording = !isRecording;
+  }
+ 
+  //if requesting a doctor
+  if(buttons[1].capacitance > 210 && buttons[1].time>0){
+      requestDoctor.on = !requestDoctor.on;
+      buttons[1].time = 0;
+  }
+  
 
   // PostRequestSample
   //if (isReporting.on) {

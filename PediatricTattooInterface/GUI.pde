@@ -1,4 +1,5 @@
-color background = color(17, 24, 63);
+//color background = color(17, 24, 63);
+color background = #5b9aff;
 color accentred = color(238, 91, 48);
 color accentwhite = color(236, 240, 241);
 color medblue = color(0, 116, 217);
@@ -9,7 +10,7 @@ PGraphics homescreen, profile;
 import de.bezier.guido.*;
 import controlP5.*;
 
-SimpleButton button, requestDoctor, isReporting, homebutton;
+SimpleButton button, requestDoctor, visitPatient, viewReport, homebutton;
 void initGraphics(){
   homescreen = createGraphics(width, height);
   profile = createGraphics(width, height);
@@ -53,7 +54,6 @@ public class SimpleButton
              
         }
         
-        
         if(image){
           if(on){
              home = false;
@@ -67,8 +67,8 @@ public class SimpleButton
         }
         
         if(image == false && home ==false){
-         if ( on ) fill(lightblue, 50);
-          else fill(medblue, 50);
+         if ( on ) fill(lightblue);
+          else fill(medblue);
           rect(x, y, width, height);
           fill(accentwhite);       
           textSize(20);
