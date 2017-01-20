@@ -46,15 +46,21 @@ void draw(){
     }
   
   //if the recording button is turned on or not
-  if(buttons[0].capacitance > 100 && buttons[0].time > .1){
+  if(buttons[0].capacitance > 100 && buttons[0].time >0){
      isRecording = !isRecording;
-     drawPatientProfile(curpatient);
+     buttons[0].capacitance = 0;
+     buttons[0].time = 0;
+  }
+  
+  if(isRecording){
+       drawPatientProfile(curpatient);
   }
  
   //if requesting a doctor
-  if(buttons[1].capacitance > 210 && buttons[1].time>0){
+  if(buttons[4].capacitance > 210 && buttons[4].time>0){
       requestDoctor.on = !requestDoctor.on;
-      buttons[1].time = 0;
+      buttons[4].time = 0;
+      buttons[4].capacitance = 0;
   }
   
   //record the sensor readings if recording
