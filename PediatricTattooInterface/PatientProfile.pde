@@ -30,6 +30,14 @@ void drawPatientProfile(int Patient){
         profile.stroke(#ffffff);
     profile.strokeWeight(2);
     
+        int[] pain = {int(random(10)), int(random(10)), int(random(10)), int(random(10)), int(random(10)), int(random(10))};
+    int painrate = 0;
+    for(int i = 0; i<pain.length; i++){
+      painrate+=pain[i];
+    }
+    
+    painrate = painrate/pain.length;
+    
     profile.rect(width-width/3, 100, 300, 300);
     profile.image(images[Patient], width-width/3 + 50, 120, 200, 260);
     profile.rect(width/3-300, height/2 + 50, width-200, 300);
@@ -42,33 +50,34 @@ void drawPatientProfile(int Patient){
     profile.fill(#00ff00);
     profile.text("Requesting doctor", width/2-100, 250-25);
     profile.fill(#ffffff);
-    profile.text("Current pain reading: 8", width/2-100, 225-25);
-    profile.text("Room Numer: 200", width/2-100, 200-25);
-    profile.text("Age: 9", width/2-100, 175-25);
+    profile.text("Current pain reading: " + painrate, width/2-100, 225-25);
+    profile.text("Room Numer: " + int(random(304)), width/2-100, 200-25);
+    profile.text("Age: " + int(random(8, 10)), width/2-100, 175-25);
     bear.resize(700, 501);
     
+
     profile.image(bear, -80, 30);
     profile.line(168, 181, 119, 209);
-    profile.text(str(int(random(10))), 105, 215);
+    profile.text(pain[0], 105, 215);
     profile.line(156, 269, 242, 252);
-    profile.text(str(int(random(10))), 142, 265);
+    profile.text(pain[1], 142, 265);
     profile.line(124, 320, 208, 341);
-    profile.text(str(int(random(10))), 110, 317);
+    profile.text(pain[2], 110, 317);
     profile.line(376, 280, 344, 342);
-    profile.text(str(int(random(10))), 373, 265);
+    profile.text(pain[3], 373, 265);
     profile.line(369, 174, 400, 225);
-    profile.text(str(int(random(10))), 403, 228);
+    profile.text(pain[4], 403, 228);
     profile.line(316, 130, 371, 110);
-    profile.text(str(int(random(10))), 376, 105);
+    profile.text(pain[5], 376, 105);
     
     float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
  
     
-      float lineWidth = (float) (width-200)/(values.length-1);
+      float lineWidth = (float) (width-205)/(values.length-1);
         for (int i=0; i<values.length-1; i++) {
           profile.strokeWeight(6);
           profile.stroke(accentred);
-          profile.line(i*lineWidth + 100, values[i] + 500, (i+1)*lineWidth + 100, values[i+1] + 500);
+          profile.line(i*lineWidth + 103, values[i] + 500, (i+1)*lineWidth + 100, values[i+1] + 500);
   }
       
     profile.endDraw();
