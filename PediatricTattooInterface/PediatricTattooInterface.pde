@@ -30,13 +30,15 @@ void draw(){
     image(profile, 0, 0);
   }
   
-      for(int i=1; i<buttons.length-1; ++i) {
+      for(int i=0; i<buttons.length; ++i) {
       if(buttons[i].capacitance > 250){
         buttons[i].time+=.1;
         println(i, buttons[i].time, second());
       }
       else{
+        if(i == 0 || i == 5){
         buttons[i].time = 0;
+        }
       }
   }
 //    for(int i = 1; i<buttons.length-1; i++){
@@ -46,10 +48,10 @@ void draw(){
 //    }
   
   //if the recording button is turned on or not
-  if(buttons[1].capacitance > 100 && buttons[1].time >0){
+  if(buttons[0].capacitance > 210 && buttons[0].time >0){
      isRecording = !isRecording;
-     buttons[1].capacitance = 0;
-     buttons[1].time = 0;
+     buttons[0].capacitance = 0;
+     buttons[0].time = 0;
   }
   
   if(isRecording){

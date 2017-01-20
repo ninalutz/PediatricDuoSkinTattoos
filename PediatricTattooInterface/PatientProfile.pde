@@ -1,5 +1,7 @@
 PImage bear;
 PShape s;
+  float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
+ 
 void drawPatientProfile(int Patient){
   println("Drawing thing", Patient);
   homescreen.clear();
@@ -70,14 +72,15 @@ void drawPatientProfile(int Patient){
     profile.text(pain[5], 376, 105);
     
     float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
- 
     
+   // if(frameCount % 5 == 0){
       float lineWidth = (float) (width-205)/(values.length-1);
         for (int i=0; i<values.length-1; i++) {
           profile.strokeWeight(6);
           profile.stroke(accentred);
           profile.line(i*lineWidth + 103, values[i] + 500, (i+1)*lineWidth + 100, values[i+1] + 500);
   }
+    //}
       
     profile.endDraw();
     
