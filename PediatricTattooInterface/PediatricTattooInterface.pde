@@ -5,7 +5,7 @@ boolean home, showprofile;
 
 void setup(){
   home = true;
-  size(1200, 800);
+  size(1200, 800, P3D);
     bear = loadImage("BearTattooPNG.png");
   initGraphics();
   
@@ -17,6 +17,7 @@ void setup(){
 }
 
 void draw(){
+  println(mouseX, mouseY);
   if(millis() % 3 == 0){
  // println(home, showprofile);
   }
