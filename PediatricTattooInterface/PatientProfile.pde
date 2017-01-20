@@ -1,7 +1,7 @@
 PImage bear;
 PShape s;
   float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
- 
+ //   int[] pain = {0, 0, 0, 0, 0, 0};
 void drawPatientProfile(int Patient){
   println("Drawing thing", Patient);
   homescreen.clear();
@@ -31,8 +31,15 @@ void drawPatientProfile(int Patient){
     profile.fill(lightblue);
         profile.stroke(#ffffff);
     profile.strokeWeight(2);
+//    
+//    if(isRecording){
+//    int[] pain = {0, int(buttons[1].time), int(buttons[3].time), int(buttons[4].time), int(buttons[2].time), 0};
+//    }
     
-    int[] pain = {0, int(buttons[2].time), int(buttons[3].time), int(buttons[4].time), 0, 0};
+   // if(!isRecording){
+     int[] pain = {0, int(buttons[1].storedtime), int(buttons[3].storedtime), int(buttons[4].storedtime), int(buttons[2].storedtime), 0};
+    //}
+    
     int painrate = 0;
     for(int i = 0; i<pain.length; i++){
       painrate+=pain[i];

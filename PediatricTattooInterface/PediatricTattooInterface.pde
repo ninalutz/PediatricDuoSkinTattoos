@@ -32,6 +32,7 @@ void draw(){
   
       for(int i=0; i<buttons.length; ++i) {
       if(buttons[i].capacitance > 250){
+        buttons[i].storedtime = buttons[i].time;
         buttons[i].time+=.1;
         println(i, buttons[i].time, second());
       }
@@ -39,7 +40,14 @@ void draw(){
         if(i == 0 || i == 5){
         buttons[i].time = 0;
         }
+        else{
+//        buttons[i].storedtime = buttons[i].time;
+        buttons[i].time = 0;
+        }
+        
       }
+     
+
   }
 //    for(int i = 1; i<buttons.length-1; i++){
 //      if(buttons[i].capacitance > 250){

@@ -2,7 +2,7 @@
 
 class CapButton {
   private int capacitance;
-  private float x, y, w, h, time;
+  private float x, y, w, h, time, storedtime;
   
   public int getCapacitance() {
     return capacitance;
