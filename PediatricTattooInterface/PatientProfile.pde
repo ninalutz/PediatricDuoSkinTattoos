@@ -21,6 +21,8 @@ void drawPatientProfile(int Patient){
     requestDoctor = new SimpleButton(width/2-100, 350, 200, 50, "Visit Patient", false, 0, Jane);
     homebutton = new SimpleButton(10, 10, 200, 50, "Home", false, Patient, Jane);
     
+    
+    
     isReporting.on = false;
     requestDoctor.on = false;
     profile.beginDraw();
@@ -58,6 +60,16 @@ void drawPatientProfile(int Patient){
     profile.text(str(int(random(10))), 403, 228);
     profile.line(316, 130, 371, 110);
     profile.text(str(int(random(10))), 376, 105);
+    
+    float[] values = { random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250), random(250) };
+ 
+    
+      float lineWidth = (float) (width-200)/(values.length-1);
+        for (int i=0; i<values.length-1; i++) {
+          profile.strokeWeight(6);
+          profile.stroke(accentred);
+          profile.line(i*lineWidth + 100, values[i] + 500, (i+1)*lineWidth + 100, values[i+1] + 500);
+  }
       
     profile.endDraw();
     
