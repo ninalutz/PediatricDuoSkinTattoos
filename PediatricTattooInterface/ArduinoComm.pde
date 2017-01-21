@@ -7,6 +7,8 @@ Serial arduinoPort;
 static final int NUM_BUTTONS = 8, BUTTON_WIDTH = 75, BUTTON_HEIGHT = 75;
 
 void initPorts(){
+  //if not using a board, comment out these lines
+   /*
   //load serial list
   String[] ports = Serial.list();
   if(ports.length == 0){
@@ -25,6 +27,8 @@ void initPorts(){
     print("Cancelled");
     exit();
   }
+  */
+  
   
   buttons = new CapButton[NUM_BUTTONS];
   int gutter = 0;
@@ -35,7 +39,7 @@ void initPorts(){
     buttons[i] = new CapButton(x0 + i*(BUTTON_WIDTH+gutter), y0, BUTTON_WIDTH, BUTTON_HEIGHT);
   }
   
-  noLoop();
+//  noLoop();
 
 }
 

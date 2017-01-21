@@ -12,7 +12,7 @@ void setup(){
 //  drawHomeScreen();
 
   drawHomeScreen();
-
+  
  // drawPatientProfile(0);
   initPorts();
 }
@@ -46,14 +46,13 @@ void draw(){
         }
         
       }
-     
 
   }
-//    for(int i = 1; i<buttons.length-1; i++){
-//      if(buttons[i].capacitance > 250){
-//       buttons[i].display();
-//      }
-//    }
+    for(int i = 1; i<buttons.length-1; i++){
+      if(buttons[i].capacitance > 250){
+       buttons[i].display();
+      }
+    }
   
   //if the recording button is turned on or not
   if(buttons[1].capacitance > 210 && buttons[1].time >0){
